@@ -1,0 +1,19 @@
+
+browser->server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser:HTML code
+browser->server:HTTP GET  https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser:main.css
+browser->server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+note over browser:
+browser starts executin js code that GETS data.json file
+end note 
+server->browser:HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+note over browser:
+browser executes JS code to populate div id with note with data from json from server
+end note
+
+browser->server:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over browser:
+executes JS code to push user input to json file then redraws list of notes with new use input
+end note 
+

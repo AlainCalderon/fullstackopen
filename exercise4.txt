@@ -1,0 +1,37 @@
+title New Note
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser: HTml code
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser:JS code
+note over Browser:
+Browser starts executing code that request JSON file data form server 
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser:JSON file
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+Browser->Server:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note over Server:
+Server adds new data to data.json file that the user posted.
+end note
+
+Server->Browser:HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser: HTml code
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser:JS code
+note over Browser:
+Browser starts executing code that request JSON file data form server 
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser:JSON file
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+
